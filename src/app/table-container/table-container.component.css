@@ -1,3 +1,22 @@
 /* :host {
     padding: 0.5rem;
 } */
+ui5-table-row, ui5-table-header-row {
+    border:none;
+}
+ui5-table-header-cell {
+    border: 1px solid #181818;
+    padding-left: 0.5rem;
+}
+ui5-table-cell {
+    padding-left: 0.5rem;
+    border: 1px solid #c8c8c8;
+}
+
+ui5-table-cell:first-child, ui5-table-header-cell:first-child {
+    border-left:none ;
+}
+
+ui5-table-cell:last-child, ui5-table-header-cell:last-child {
+    border-right: none;
+}

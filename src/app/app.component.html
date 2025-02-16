@@ -1,12 +1,11 @@
 <ui5-bar class="headBar" design="Header">
   
   <a href="#" slot="startContent"><img src="favicon.ico" alt="logo" width="32" height="32" /></a>
-  <!-- <ui5-button design="Transparent"  >Delta</ui5-button> -->
   
   <ui5-title level="H3" size="H3">Base Visu</ui5-title>
 
   <div class="header-right-content" slot="endContent">
-    <ui5-combobox value="filter item 1">
+    <ui5-combobox [(ngModel)]="filterItem" value="filterItem">
       <ui5-cb-item text="filter item 1"></ui5-cb-item>
       <ui5-cb-item text="filter item 2"></ui5-cb-item>
       <ui5-cb-item text="filter item 3"></ui5-cb-item>
@@ -15,10 +14,10 @@
   
     <ui5-label style="color: #0070f2; font-weight: 600;" > Administrator </ui5-label>
 
-    <ui5-button design="Transparent">Logout</ui5-button>
+    <ui5-button (ui5Click)="logOut()" design="Transparent">Logout</ui5-button>
   
-    <ui5-button design="Transparent" id="btnLang" endIcon="sap-icon://slim-arrow-down">EN</ui5-button>
-    <ui5-menu open opener="btnLang">
+    <ui5-button (click)="showItemList()" design="Transparent" id="btnLang" endIcon="sap-icon://slim-arrow-down">{{lang}}</ui5-button>
+    <ui5-menu (ui5ItemClick)="setLang($event.text)" [open]="flag" opener="btnLang">
       <ui5-menu-item text="EN"></ui5-menu-item>
       <ui5-menu-item text="BN"></ui5-menu-item>
       <ui5-menu-item text="JP"></ui5-menu-item>
