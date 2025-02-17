@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-import {MenuItemComponent, Ui5WebcomponentsModule} from '@ui5/webcomponents-ngx'
+import { Ui5WebcomponentsModule} from '@ui5/webcomponents-ngx'
 import { SideMenuComponent } from "./side-menu/side-menu.component";
 import { TableContainerComponent } from "./table-container/table-container.component";
+import "@ui5/webcomponents-icons/dist/AllIcons.js";
 
 @Component({
   selector: 'app-root',

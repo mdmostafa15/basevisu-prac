@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Ui5WebcomponentsModule } from '@ui5/webcomponents-ngx';
+import { Ui5WebcomponentsModule} from '@ui5/webcomponents-ngx';
+
 
 @Component({
   selector: 'app-side-menu',
